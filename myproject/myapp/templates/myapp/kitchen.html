@@ -1,0 +1,33 @@
+<!-- myapp/templates/myapp/kitchen.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Orders</title>
+    <!-- Add your styles if needed -->
+</head>
+<body>
+    <h1>Kitchen Orders</h1>
+    <p>Debug: {{ orders }}</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ order.item }}</td>
+                    <td>{{ order.quantity }}</td>
+                    <td>{{ order.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
